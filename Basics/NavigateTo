@@ -1,0 +1,61 @@
+package testing_firefox;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class test1
+{
+
+	public static void main(String[] args) throws InterruptedException
+	{
+		FirefoxDriver driver=new FirefoxDriver();
+		//site 1
+		driver.navigate().to("https://www.amazon.in/");
+		String title = driver.getTitle();
+		System.out.println(title);
+		//site id
+		String url = driver.getCurrentUrl();
+		System.out.println(url);
+		Thread.sleep(300);
+		//site 2
+		driver.get("https://www.facebook.com/");
+		 String title1 = driver.getTitle();
+		 System.out.println(title1);
+		driver.manage().window().maximize();
+		
+		//navigate back
+		driver.navigate().back();
+		
+		//title name after navigate back
+		String title2 = driver.getTitle();
+		
+		System.out.println(title2);
+		//site id
+		String url1 = driver.getCurrentUrl();
+		System.out.println(url1);
+		Thread.sleep(300);
+		
+		//forword navigation
+		driver.navigate().forward();
+		String title3 = driver.getTitle();
+		System.out.println(title3);
+		
+		//refresh the page
+		driver.navigate().refresh();
+		String title4 = driver.getTitle();
+		System.out.println(title4);
+		
+		//output
+//		Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in
+//		https://www.amazon.in/
+//		Facebook - ??? ?? ????? ???? ??
+//		Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in
+//		https://www.amazon.in/
+//		Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in
+//		Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in
+
+		
+		
+
+	}
+
+}
