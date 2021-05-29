@@ -1,0 +1,20 @@
+package demotestng1;
+
+import org.testng.annotations.Test;
+
+public class Test1 {
+  @Test
+  public void test1() {
+	  System.out.println("hello welcome to TestNG");
+  }
+}
+
+
+/*OUTPUT console:
+ * hello welcome to TestNG
+ PASSED: test1
+
+===============================================
+    Default test
+    Tests run: 1, Failures: 0, Skips: 0
+===============================================*/
