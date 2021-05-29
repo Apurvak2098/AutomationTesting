@@ -1,0 +1,49 @@
+package demotestng1;
+
+import org.testng.annotations.Test;
+
+
+public class Test2 {
+	@Test
+	public void test1(){
+		System.out.println("test1");
+	}
+	@Test
+	public void test2(){
+		System.out.println("test2");
+	}
+
+}
+
+/*test1
+test2
+PASSED: test1
+PASSED: test2
+
+===============================================
+    Default test
+    Tests run: 2, Failures: 0, Skips: 0
+===============================================
+
+
+===============================================
+Default suite
+Total tests run: 2, Passes: 2, Failures: 0, Skips: 0
+===============================================*/
+
+
+
+//=============XML FILE=========================
+
+/*<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+     
+      <class name="demotestng1.Test2"/>
+      
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+*/
