@@ -1,0 +1,91 @@
+package demotestng1;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterGroups;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeGroups;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class testNG_annotation {
+	@Test
+	public void test()
+	{
+		System.out.println("test done");
+	}
+	@BeforeSuite
+	public void beforesuite()
+	{
+		System.out.println(" before suite");
+	}
+	@AfterSuite
+	public void aftersuite()
+	{
+		System.out.println(" after suite");
+	}
+	@BeforeClass
+	public void beforeclass()
+	{
+		System.out.println(" before class");
+	}
+	@AfterClass
+	public void afterclass()
+	{
+		System.out.println(" after class");
+	}
+	@BeforeMethod
+	public void beforemethod()
+	{
+		System.out.println(" before method");
+	}
+	@AfterMethod
+	public void aftermethod()
+	{
+		System.out.println(" after method");
+	}
+	@BeforeTest
+	public void beforeTest()
+	{
+		System.out.println(" before Test");
+	}
+	@AfterTest
+	public void afterTest()
+	{
+		System.out.println(" after Test");
+	}
+	
+
+}
+
+/*output:
+ * before suite
+ before Test
+ before class
+ before method
+test done
+ after method
+ after class
+ after Test
+PASSED: test
+
+===============================================
+    Default test
+    Tests run: 1, Failures: 0, Skips: 0
+===============================================
+
+ after suite
+
+===============================================
+Default suite
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+ */
+
+
+
+
