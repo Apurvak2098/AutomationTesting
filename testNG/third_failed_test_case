@@ -1,0 +1,69 @@
+package demotestng1;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class thirdtest {
+	
+	@Test
+	public void first()
+	{
+		System.out.println("I'm in first test case");
+	}
+	@Test
+	public void second()
+	{
+		System.out.println("I'm in second test case");
+	}
+	@Test 
+	public void failed1()
+	{
+		System.out.println("faliled1");
+		Assert.assertEquals(true, false);
+	}
+	@Test 
+	public void failed2()
+	{
+		System.out.println("faliled2");
+		Assert.assertEquals(true, false);
+	}
+	@Test
+	public void third()
+	{
+		System.out.println("I'm in third test case");
+	}
+	@Test
+	public void forth()
+	{
+		System.out.println("I'm in forth test case");
+	}
+
+
+
+}
+
+
+
+
+
+/*output:-
+ * Default test
+    Tests run: 6, Failures: 2, Skips: 0
+===============================================
+
+
+===============================================
+Default suite
+Total tests run: 6, Passes: 4, Failures: 2, Skips: 0
+===============================================
+faliled1
+faliled2
+I'm in first test case
+I'm in forth test case
+I'm in second test case
+I'm in third test case
+PASSED: second
+PASSED: third
+PASSED: forth
+PASSED: first
+FAILED: failed2*/
