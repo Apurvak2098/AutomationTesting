@@ -1,0 +1,67 @@
+package demotestng1;
+
+import org.testng.annotations.Test;
+
+public class priority {
+	@Test(priority=-5)
+	public void first()
+	{
+		System.out.println("I'm in first test case");
+	}
+	@Test(priority=5)
+	public void second()
+	{
+		System.out.println("I'm in second test case");
+	}
+	@Test (priority=-1)
+	public void fifth()
+	{
+		System.out.println("faliled1");
+		
+	}
+	@Test (priority=1)
+	public void six()
+	{
+		System.out.println("faliled2");
+		
+	}
+	@Test
+	public void third()
+	{
+		System.out.println("I'm in third test case");
+	}
+	@Test
+	public void forth()
+	{
+		System.out.println("I'm in forth test case");
+	}
+
+
+
+}
+
+/*output
+I'm in first test case
+faliled1
+I'm in forth test case
+I'm in third test case
+faliled2
+I'm in second test case
+PASSED: six
+PASSED: first
+PASSED: fifth
+PASSED: second
+PASSED: forth
+PASSED: third
+
+===============================================
+    Default test
+    Tests run: 6, Failures: 0, Skips: 0
+===============================================
+
+
+===============================================
+Default suite
+Total tests run: 6, Passes: 6, Failures: 0, Skips: 0
+===============================================*/
+    
